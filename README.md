@@ -11,7 +11,8 @@ wget https://raw.githubusercontent.com/intsez/WordPress-autoinstaller/refs/heads
 chmod +x WordPress_autoinstaller.sh
 ./WordPress_autoinstaller.sh
 ```
-![WordPress_Installer](https://github.com/user-attachments/assets/181ba3f9-166c-49e8-82eb-a5a2717ce5a0)
+![WordPress_Installer](https://github.com/user-attachments/assets/fb9dbd24-7b55-4028-9699-7ca054fc70e1)
+
 
 
 # WordPress_importer.sh
@@ -24,4 +25,5 @@ wget https://raw.githubusercontent.com/intsez/WordPress_scripts/refs/heads/main/
 chmod +x WordPress_importer.sh
 ./WordPress_importer.sh
 ```
-![WordPress_importer](https://github.com/user-attachments/assets/021f4411-4ab8-4568-8f75-54ecbbfaf95a)
+![WordPress_importer](https://github.com/user-attachments/assets/00626881-5ad2-4ce7-95fc-7c158d9c7230)
+
