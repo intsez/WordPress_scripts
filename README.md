@@ -1,10 +1,7 @@
 # WordPress-autoinstaller.sh
-A script for Debian and derivatives that makes easy to install WordPress on your own server.
-Basic features:
+A script for Debian and derivatives that makes it easy to install WordPress on a web server with a LEMP stack installed. The script allows you to:
 * automatic WordPress installation using [wp cli](https://wp-cli.org),
-* automatic generation of a [Self-signed SSL certificate](https://en.wikipedia.org/wiki/Self-signed_certificate) and a 2048-bit [Diffie-Hellman](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) key,
-* import database from local server and [update URIs](https://developer.wordpress.org/advanced-administration/upgrade/migrating/),
-* install a [brute force attack](https://en.wikipedia.org/wiki/Brute-force_attack) protection plugin ([fail2ban](https://en.wikipedia.org/wiki/Fail2ban) + [mu-plugin](https://developer.wordpress.org/advanced-administration/plugins/mu-plugins/))
+* automatic generation of a [Self-signed SSL certificate](https://en.wikipedia.org/wiki/Self-signed_certificate) and [Diffie-Hellman](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) key file (both 2048 bit).
 
 ## Usage
 Just download and execute the script :
