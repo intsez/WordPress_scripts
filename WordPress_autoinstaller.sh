@@ -355,9 +355,9 @@ fi
         chown -R 0775 $WPdir
         chown -R www-data:www-data $WPdir
 # test and reload nginx
-	echo 
-        nginx -t && nginx -s reload
-        echo 
+	echo -e "${CGREEN}"
+	nginx -t && nginx -s reload
+        echo -e "${CEND}"
 #!/bin/bash
 # A script for Debian and derivatives that makes it easy to install WordPress on a web server with a LEMP stack installed. The script allows for:
 #	> automatic WordPress installation using wp cli from command line
