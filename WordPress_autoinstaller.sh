@@ -1,7 +1,7 @@
 #!/bin/bash
-# A script for Debian and derivatives that makes it easy to install WordPress on a web server with a LEMP stack installed. The script allows you to:
-#	> automatic WordPress installation using wp cli
-#	> automatic generation of a self-signed SSL certificate and Diffie-Hellman file in the background (both 2048-bit)
+# A script for Debian and derivatives that makes it easy to install WordPress on a web server with a LEMP stack installed. The script allows for:
+#	> automatic WordPress installation using wp cli from command line
+#	> automatic generation of a self-signed SSL certificate and Diffie-Hellman file (in the background process, both 2048-bit)
 
 # Colors, standard prefix
 CSI="\033["
