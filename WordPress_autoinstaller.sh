@@ -283,10 +283,12 @@ fi
 # disable include conf.d in main serwer configuration, will be added in VPS config
 	sed -i "s|include /etc/nginx/conf|#include /etc/nginx/conf|g" /etc/nginx/nginx.conf
 
+# change the php version
+	sed -i "s|php8.2-fpm|php$PHP_VER-fpm|g" /etc/nginx/sites-available/wordpress.conf
+
 # <<<< NGINX - download configuration files
 
-
-# >>>> CREATE DATABASE USER AND ADD PRIVILEGES
+# >>>> CREATE DATABASE USER AND SET PRIVILEGES
 	mysql -e "CREATE DATABASE ${dbname} /*\!40100 DEFAULT CHARACTER SET utf8 */;"
 	echo
 	echo "All existing databases:"
@@ -320,11 +322,8 @@ fi
 	sleep 5;
 	
 # <<<<< CREATE DATABASE USER AND ADD PRIVILEGES
-	
-#change php version
-	sed -i "s|php8.2|php$PHP_VER|g" /etc/nginx/sites-available/wordpress.conf
 
-# Download and install WordPress
+# >>>>> Download and install WordPress
 # set Wordpress directory permissions for installation process
 	chown -R 0777 $WPdir
 # download wp cli for headless instalaltion
@@ -344,7 +343,9 @@ fi
 	cp $WPdir/wordpress/wp-config.php $WPdir/wordpress/wp-config.backup
 	curl -o /usr/local/src/wordpress/wp-config-security.conf -O https://raw.githubusercontent.com/intsez/WordPress/main/conf/wp-config-security.conf
 	cat /usr/local/src/wordpress/wp-config-security.conf >> $WPdir/wordpress/wp-config.php
-	
+
+# <<<<< Downalod and install WordPress
+
 # Cleaning the system, setting permissions, realoading nginx
 #_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 	rm -rf /usr/local/src/wordpress
