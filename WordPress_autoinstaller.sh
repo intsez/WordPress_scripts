@@ -358,6 +358,21 @@ fi
 	echo 
         nginx -t && nginx -s reload
         echo 
+#!/bin/bash
+# A script for Debian and derivatives that makes it easy to install WordPress on a web server with a LEMP stack installed. The script allows for:
+#	> automatic WordPress installation using wp cli from command line
+#	> automatic generation of a self-signed SSL certificate and Diffie-Hellman file (in the background process, both 2048-bit)
+
+# Colors, standard prefix
+CSI="\033["
+# disable color
+CEND="${CSI}0m"
+# red background
+CREDBG="${CSI}41m"
+# red
+CRED="${CSI}91m"
+# green
+CGREEN="${CSI}32m"
 
 # Summary and tips
 #_-_-_-_-_-_-_-_-_-
@@ -368,9 +383,9 @@ fi
 	echo -e "${CGREEN}  > $WPdir/wordpress/wp-config.php (scroll down to see added security rules)"
 	echo -e "  > /etc/nginx/sites-available/wordpress.conf\n  > /etc/nginx/conf.d/wpnx-restr.conf\n  > /etc/nginx/ssl/ssl-params.conf${CEND}"
 	echo
-	echo -e "Remember to change your self-signed certificate and generate a strong dhparam.pem key file!\nAdjust configuration files and reload Nginx if necessary"
-		echo		
-	echo -e "Type: localhost in your browser address bar to view your WordPress site. "
+	echo -e " > Remember to change your self-signed certificate and generate a strong dhparam.pem key file!\n\n > If nginx is not running, the script is probably still running in the background\n   generating the dhparam.pem key file. Check this by typing ${CGREEN}ps r${CEND} in the terminal.\n   Once the script has finished, reload nginx by typing ${CGREEN}nginx -t && nginx -s reload${CEND} in the terminal."
+	echo		
+	echo -e " > Type: localhost in your browser address bar to view your WordPress site. "
 	echo
-	echo -e "${CGREEN} Installation completed${CEND}"
+	echo -e "${CGREEN}Installation completed.${CEND}"
 	echo
