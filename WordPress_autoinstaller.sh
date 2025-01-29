@@ -271,11 +271,11 @@ fi
 	sed -i "s|/var/www/wordpress|$WPdir/wordpress|g" /etc/nginx/sites-available/wordpress.conf
 
 # remove old shortcuts
-    rm -rf /etc/nginx/sites-enabled/wordpress*
-    rm -rf /etc/nginx/sites-enabled/default*
+	rm -rf /etc/nginx/sites-enabled/wordpress*
+	rm -rf /etc/nginx/sites-enabled/default*
 	
 # create shortcut for WordPress configuration
-    ln -s /etc/nginx/sites-available/wordpress.conf /etc/nginx/sites-enabled/
+	ln -s /etc/nginx/sites-available/wordpress.conf /etc/nginx/sites-enabled/
 
 #remove shortcut for a default website
 	rm -rf /etc/nginx/sites-enabled/default
@@ -302,7 +302,7 @@ fi
 		echo "Unexpected failure."
 		echo
 		exit 1
-    fi
+	fi
 # show table prefix
 	echo -e "${CGREEN}Table prefix ${CEND}${dbprefix} ${CGREEN}created."
 # Grant ALL privileges for the database
@@ -347,14 +347,14 @@ fi
 	
 # Cleaning the system, setting permissions, realoading nginx
 #_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
-		rm -rf /usr/local/src/wordpress
+	rm -rf /usr/local/src/wordpress
         rm -rf /root/.wp-cli
 # set proper permissions for Wordpress and certificate file
-		chmod 600 /etc/nginx/ssl/dhparam.pem /etc/nginx/ssl/selfsigned.key /etc/nginx/ssl/selfsigned.crt
+	chmod 600 /etc/nginx/ssl/dhparam.pem /etc/nginx/ssl/selfsigned.key /etc/nginx/ssl/selfsigned.crt
         chown -R 0775 $WPdir
         chown -R www-data:www-data $WPdir
 # test and reload nginx
-		echo 
+	echo 
         nginx -t && nginx -s reload
         echo 
 
@@ -371,5 +371,5 @@ fi
 		echo		
 	echo -e "Type: localhost in your browser address bar to view your WordPress site. "
 	echo
-	echo -e "${CGREEN} Installation complete${CEND}"
+	echo -e "${CGREEN} Installation completed${CEND}"
 	echo
