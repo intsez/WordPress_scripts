@@ -358,21 +358,6 @@ fi
 	echo -e "${CGREEN}"
 	nginx -t && nginx -s reload
         echo -e "${CEND}"
-#!/bin/bash
-# A script for Debian and derivatives that makes it easy to install WordPress on a web server with a LEMP stack installed. The script allows for:
-#	> automatic WordPress installation using wp cli from command line
-#	> automatic generation of a self-signed SSL certificate and Diffie-Hellman file (in the background process, both 2048-bit)
-
-# Colors, standard prefix
-CSI="\033["
-# disable color
-CEND="${CSI}0m"
-# red background
-CREDBG="${CSI}41m"
-# red
-CRED="${CSI}91m"
-# green
-CGREEN="${CSI}32m"
 
 # Summary and tips
 #_-_-_-_-_-_-_-_-_-
