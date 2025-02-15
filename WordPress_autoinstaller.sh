@@ -244,7 +244,7 @@ fi
 # >>>> Install LEMP if selected
 	if [[ "$INSTLEMP" = 'y' ]]; then
         echo
-		apt update;apt install nginx mariadb-server php php-fpm php-mysqli php-common php-mbstring php-bz2 php-xmlrpc php-gd php-xml php-mysql php-cli php-zip php-curl php-intl php-opcache php-imagick -y
+		apt update;apt install nginx mariadb-server php php-fpm php-mysql php-common php-mbstring php-bz2 php-xmlrpc php-gd php-xml php-mysql php-cli php-zip php-curl php-intl php-opcache php-imagick -y
 	fi
 # <<<< Install LEMP if selected
 
