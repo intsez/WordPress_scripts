@@ -374,3 +374,4 @@ fi
 	echo
 	echo -e "${CGREEN}Installation completed.${CEND}"
 	echo
+exit
