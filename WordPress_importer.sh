@@ -142,3 +142,4 @@ clear
 echo
 echo -e "${CGREEN} Import completed.${CEND}"
 echo
+exit
